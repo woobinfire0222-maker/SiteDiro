@@ -12,7 +12,9 @@
           var params = new URLSearchParams(qs);
           var path = params.get('p') || '/';
           var query = params.get('q') ? '?' + params.get('q') : '';
-          window.history.replaceState(null, '', path + query + window.location.hash);
+          // base = '/SiteDiro' (현재 pathname에서 trailing slash 제거)
+          var base = window.location.pathname.replace(/\/[^/]*$/, '');
+          window.history.replaceState(null, '', base + path + query + window.location.hash);
         }
       })();
     </script>
