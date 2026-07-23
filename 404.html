@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <title>DIRO</title>
-  <script>
-    // GitHub Pages SPA 라우팅: 404를 index.html로 리다이렉트
-    // 경로를 query string으로 인코딩하여 index.html의 스크립트가 복원
-    var l = window.location;
-    var base = l.pathname.split('/').slice(0, 2).join('/');
-    var path = l.pathname.slice(base.length) || '/';
-    var query = l.search ? '&q=' + encodeURIComponent(l.search.slice(1)) : '';
-    l.replace(base + '/?p=' + encodeURIComponent(path) + query + l.hash);
-  </script>
-</head>
-<body></body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>DIRO</title>
+    <meta name="description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="DIRO" />
+    <meta property="og:description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DIRO" />
+    <meta name="twitter:description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <link rel="icon" type="image/svg+xml" href="/SiteDiro/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/SiteDiro/assets/index-C2rzq23-.js"></script>
+    <link rel="stylesheet" crossorigin href="/SiteDiro/assets/index-Cv9hZ9Sa.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
