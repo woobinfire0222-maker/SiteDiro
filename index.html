@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>DIRO</title>
+    <script>
+      // GitHub Pages SPA 라우팅 복원: 404.html이 /?p=경로 로 리다이렉트한 것을 처리
+      (function() {
+        var qs = window.location.search;
+        if (qs.indexOf('?p=') === 0 || qs.indexOf('&p=') !== -1) {
+          var params = new URLSearchParams(qs);
+          var path = params.get('p') || '/';
+          var query = params.get('q') ? '?' + params.get('q') : '';
+          window.history.replaceState(null, '', path + query + window.location.hash);
+        }
+      })();
+    </script>
+    <meta name="description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="DIRO" />
+    <meta property="og:description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DIRO" />
+    <meta name="twitter:description" content="DIRO — built on Replit. Update this description to reflect the app." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-Cwx9TZL3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cv9hZ9Sa.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
